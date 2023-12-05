@@ -5,11 +5,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
       <link rel="stylesheet" href="css/main.css">
-      <title>Disney Movie Analysis - Daniel and Alphonsus</title>
+      <title>Disney Movies Analysis - Daniel and Alphonsus</title>
    </head>
    <body>
       <nav class="navbar navbar-expand-lg bg-light navbar-light">
-         <img src="https://unsplash.it/30/30" class="mr-2"><a class="navbar-brand" href="#">Disney Movie Analysis</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body" aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+         <img src="https://static.wikia.nocookie.net/logopedia/images/e/e9/Disney_D_2006.svg/revision/latest/scale-to-width-down/250?cb=20200913122844" width="50" 
+         height="50" class="mr-2"><a class="navbar-brand" href="#">Disney Movies Analysis</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body" aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
          <div class="collapse navbar-collapse" id="navbar-body">
             <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav ml-auto">
@@ -21,27 +22,39 @@
             </ul>
          </div>
       </nav>
+      <!--jumbo-->
+      <div class="jumbotron jumbotron-fluid">
+         <div class="container">
+            <h1 class="display-4">Disney Movies Analysis Project</h1>
+            <p class="lead">Principles of Computing - Project ID: 26.</p>
+         </div>
+      </div>
+      <div class="container" id="bsr-wrapper"></div>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="js/main.js"></script>
+      <!--jumbo-->
       <div class="container" id="bsr-wrapper">
          <div class='py-3 my-4'></div>
-         <h1>Disney Movie Analysis Project</h1>
+         <h1>Project Description</h1>
          <div class="row">
             <div class="col-md-9">
-               <p>Project ID - 26 | Project Members - Daniel Stracensky and Alphonsus Koong Bok Hui</p>
+               <p>Disney movies have been a mainstay of the entertainment industry for the past half-century. Very few other movie studios have had the same prolonged success or cultural impact as Disney. So what makes Disney movies so much more successful than others? Is there a secret to Disney’s success, or is it the culmination of trial and error coupled with a bit of luck?<br> <br>This data visualization project analyzes Disney movie performance from 1960 to 2016, investigating the categories of movie genre, MPAA rating, studio divisions, and relationships to the performance of the US economy, all in comparison to total gross income.<br> <br> <br> Exploration Questions - In trying to discern which factors contribute to the success of Disney movies, these questions guided our investigation.<br> <br>Question 1: Which genre within Disney movies produces the highest income? <br>
+                  Question 2: How does the MPAA rating of a Disney movie affect its income?<br>
+                  Question 3: Is there any difference in the rating of Disney movies over time?<br>
+                  Question 4: Is there any difference in the rating of Disney movies based on genre?<br>
+                  Question 5: How does the national economy affect the income of Disney movies?<br>
+                  Question 6: How do Marvel or Pixar movies compare to other Disney movies in income?<br>
+                  Question 7: Does the month of release for a Disney movie affect its income?</p>
             </div>
-            <div class="col"><img src="https://unsplash.it/300/300" class="img-fluid mr-auto d-block border-0 rounded-0 "></div>
+            <div class="col"><img src="https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2013/06/sta488588LARGE.jpg" width="1500" height="1500" class="img-fluid mr-auto d-block border-0 rounded-0 " ></div>
          </div>
          <div class='py-3 my-4'></div>
-         <h2>Exploration Questions</h2>
-         <p>Question 1: Which genre within Disney movies produces the highest income. (regular and inflated)
-            Question 2: How does the MPAA rating of a Disney movie affect its income.
-            Question 3: Is there any difference in the rating of Disney movies over time.
-            Question 4: Is there any difference in the rating of Disney movies based on genre.
-            Question 5: How does the national economy affect the income of Disney movies.
-            Question 6: How do Marvel or Pixar movies compare to other Disney movies in income.
-            Question 8: Does the month of release for a Disney movie affect its income.</p>
-         <div class='py-3 my-4'></div>
          <h3>Data Sources and Data Journey</h3>
-         <p>Disney CSV, Marvel CSV, Pixar CSV, GDP JSON</p>
+         <p>Data Sources - We started off this project with a CSV (Comma Separated Values) data source which had every Disney movie released up until 2016 along with their release date, genre, MPAA rating, total gross income, and inflation adjusted total gross income. This data set served as the catalyst for our project and guided our exploration as we tried to compare these aspects of Disney movies to see their success. From there we realized we wanted to compare the income of Disney movies to the US GDP, to examine the effect of the economy on Disney movies. To do this we found a JSON (JavaScript Object Notation) data source that had the GDP of the US each year from 1960 to the present day. Finally, we wanted to see if certain studios of Disney movies performed better than the main corpus of Disney works. This led us to find two additional CSV files with the names of Disney Pixar movies and Disney Marvel movies.<br> <br>Data Journey - Many of the questions we wanted to explore revolved around the average inflation adjusted total gross income of Disney movies, whether it be by year, movie genre, MPAA rating, or studio. This meant that the majority of our data manipulation was separating the movies into these categories, calculating those averages, and creating data frames that organized that information for visualizations. <br> <br>Data Caveats - There are a few caveats with our data sources. Primarily, the main Disney movies CSV we used were incomplete in the MPAA ratings of the movies, with many of them not rated. This may impact some of the insights we make based on MPAA ratings. Another caveat is that the Disney movies CSV only goes until 2016, meaning more recent movies are left out, and no impact from the COVID-19 pandemic is taken into account. A final caveat is that in order to make the GDP data and Disney movie data compatible, the starting point of our data was set at 1960, meaning eight early Disney movies released before that date are not included in our analysis.
+         </p>
+         <div class='py-3 my-4'></div>
+         <h4>Project Members</h4>
+         <p>Daniel Stracensky - Daniel is a junior from Ohio. He is a History and Classics double major and wanted to learn about code and computing because he thinks it is a valuable skill and could help in examining historical data.<br> <br>
+         Alphonsus Koong Bok Hui - Alphonsus is a freshman from Singapore. He intends to major in Computer Science and Philosophy in order to harness technology to solve social, political, and economic problems in the world.</p>
          <div class='py-3 my-4'></div>
       </div>
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="js/main.js"></script>
